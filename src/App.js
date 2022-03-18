@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import '@fontsource/montserrat';
+import {
+  Container,
+  createTheme,
+  Divider,
+  ThemeProvider,
+  Typography,
+} from '@mui/material';
 import './App.css';
+import Filters from './components/Filters';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: 'Montserrat',
+      fontWeightRegular: 700,
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Container
+          sx={{
+            minHeight: '80vh',
+            maxHeight: '90vh',
+            maxWidth: '96%',
+            backgroundColor: '#fff',
+            borderRadius: '20px',
+            overflowY: 'auto',
+          }}
+          maxWidth="sm"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Typography
+            sx={{
+              fontWeight: 'bold',
+              marginTop: '20px',
+            }}
+            variant="h5"
+            align="center"
+            gutterBottom
+          >
+            Todo App with REDUX Toolkit
+          </Typography>
+          <Filters />
+          <Divider sx={{ margin: '16px 0' }} />
+          <TodoList />
+          <TodoForm />
+        </Container>
+      </div>
+    </ThemeProvider>
   );
 }
 
