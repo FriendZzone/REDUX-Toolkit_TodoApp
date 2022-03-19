@@ -67,7 +67,7 @@ export default function Todo({ todo }) {
           : { padding: 0 }
       }
     >
-      <ListItemIcon>
+      <ListItemIcon sx={{ minWidth: '24px' }}>
         <Checkbox
           checked={checked}
           onChange={toggleCheckbox}
