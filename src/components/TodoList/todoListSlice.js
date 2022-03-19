@@ -26,7 +26,7 @@ const initState = JSON.parse(
   },
   {
     id: 4,
-    name: 'Find first Intership Job',
+    name: 'Find first Internship Job',
     completed: false,
     priority: 'high',
   },
