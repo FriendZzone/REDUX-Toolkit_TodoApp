@@ -13,7 +13,7 @@ export default function TodoList() {
         // maxHeight: '25vh',
         backgroundColor: '#ffc0cb52',
         borderRadius: '20px',
-        overflow: 'auto',
+        overflow: 'hidden scroll',
         height: '144px',
       }}
       maxWidth="sm"
