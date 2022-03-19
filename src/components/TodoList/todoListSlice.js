@@ -26,9 +26,9 @@ const initState = JSON.parse(
   },
   {
     id: 4,
-    name: 'Git & Github',
+    name: 'Find first Intership Job',
     completed: false,
-    priority: 'medium',
+    priority: 'high',
   },
 ];
 export const ADD_TODO = createAction('ADD_TODO');
