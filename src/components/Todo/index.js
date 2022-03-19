@@ -1,4 +1,3 @@
-import DeleteIcon from '@mui/icons-material/Delete';
 import {
   Button,
   Checkbox,
@@ -94,15 +93,9 @@ export default function Todo({ todo }) {
           priorityFormat={priorityFormat}
           name={name}
           handleEditTodo={handleEditTodo}
+          handleDeleteTodo={handleDeleteTodo}
         />
       )}
-
-      <Button>
-        <DeleteIcon
-          color="error"
-          onClick={handleDeleteTodo}
-        />
-      </Button>
     </ListItem>
   );
 }

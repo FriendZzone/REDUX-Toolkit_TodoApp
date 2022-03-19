@@ -19,13 +19,15 @@ function TodoEdit({
     <>
       <ListItemText>
         <TextField
+          sx={{ fontSize: '10px' }}
           autoFocus
+          fullWidth
           value={editName}
           onChange={handleEditNameChange}
         />
       </ListItemText>
       <Select
-        sx={{ minWidth: '20%' }}
+        sx={{ minWidth: '25%', fontSize: '14px' }}
         value={editPriority}
         onChange={handleEditPriorityChange}
       >
@@ -33,7 +35,10 @@ function TodoEdit({
         <MenuItem value="medium">Medium</MenuItem>
         <MenuItem value="high">High</MenuItem>
       </Select>
-      <Button>
+      <Button
+        size="small"
+        sx={{ minWidth: '40px' }}
+      >
         <CheckCircleIcon
           color="success"
           onClick={handleSubmitEditTodo}

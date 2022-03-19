@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const priorityColorMapping = {
   High: '#e46161',
@@ -17,6 +18,7 @@ function TodoInfo({
   priorityFormat,
   name,
   handleEditTodo,
+  handleDeleteTodo,
 }) {
   return (
     <>
@@ -26,22 +28,35 @@ function TodoInfo({
       <ListItemIcon>
         <Avatar
           sx={{
-            fontSize: '14px',
+            fontSize: '12px',
             bgcolor:
               priorityColorMapping[
                 priorityFormat
               ],
             width: '100%',
+            height: '28px',
           }}
           variant="rounded"
         >
           {priorityFormat}
         </Avatar>
       </ListItemIcon>
-      <Button>
+      <Button
+        size="small"
+        sx={{ minWidth: '36px' }}
+      >
         <EditIcon
           color="info"
           onClick={handleEditTodo}
+        />
+      </Button>
+      <Button
+        size="small"
+        sx={{ minWidth: '36px' }}
+      >
+        <DeleteIcon
+          color="error"
+          onClick={handleDeleteTodo}
         />
       </Button>
     </>
